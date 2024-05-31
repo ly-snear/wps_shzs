@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<CameraGroupInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Title>教师三目摄像头</Title>
+  <CameraGroupItemList>
+    <CameraGroupItemInfo>
+      <Title>画面1</Title>
+      <PreviewUrl>usb://0|640x480|true|true|rtmp://192.168.110.101:1935/live/usb1</PreviewUrl>
+      <Url>rtmp://192.168.110.101:1935/live/usb1</Url>
+    </CameraGroupItemInfo>
+    <CameraGroupItemInfo>
+      <Title>画面2</Title>
+      <PreviewUrl>usb://1|640x480|true|true|rtmp://192.168.110.101:1935/live/usb2</PreviewUrl>
+      <Url>rtmp://192.168.110.101:1935/live/usb2</Url>
+    </CameraGroupItemInfo>
+    <CameraGroupItemInfo>
+      <Title>画面3</Title>
+      <PreviewUrl></PreviewUrl>
+      <Url></Url>
+    </CameraGroupItemInfo>
+  </CameraGroupItemList>
+</CameraGroupInfo>
