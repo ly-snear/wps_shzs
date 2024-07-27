@@ -303,14 +303,47 @@ namespace CalligraphyAssistantMain.Code
             {
                 Student2Rect = Rect.Parse(ConfigurationManager.AppSettings["Student2Rect"]);
             }
-            if (ConfigurationManager.AppSettings["CameraGroup1"] != null)
+
+            //if (ConfigurationManager.AppSettings["CameraGroup1"] != null)
+            //{
+            //    string path = ConfigurationManager.AppSettings["CameraGroup1"];
+            //    if (File.Exists(path))
+            //    {
+            //        CameraGroup1 = Common.XmlDeserializeFromFile<CameraGroupInfo>(path);
+            //    }
+            //}
+
+            CameraGroupInfo cgi = new CameraGroupInfo();
+            cgi.Title = "教师三目摄像头";
+            CameraGroupItemInfo cameraGroupItemInfo1 = new CameraGroupItemInfo
             {
-                string path = ConfigurationManager.AppSettings["CameraGroup1"];
-                if (File.Exists(path))
-                {
-                    CameraGroup1 = Common.XmlDeserializeFromFile<CameraGroupInfo>(path);
-                }
-            }
+                Title = "画面1",
+                PreviewUrl = "usb://0|640x480|true|true|rtmp://192.168.110.101:1935/live/usb1",
+                Url = "rtmp://192.168.110.101:1935/live/usb1"
+            };
+            List<CameraGroupItemInfo> cameraGroupItemInfos = new List<CameraGroupItemInfo>();
+            cameraGroupItemInfos.Add(cameraGroupItemInfo1);
+
+            CameraGroupItemInfo cameraGroupItemInfo2 = new CameraGroupItemInfo
+            {
+                Title = "画面2",
+                PreviewUrl = "usb://1|640x480|true|true|rtmp://192.168.110.101:1935/live/usb2",
+                Url = "rtmp://192.168.110.101:1935/live/usb2"
+            };
+            cameraGroupItemInfos.Add(cameraGroupItemInfo2);
+
+            CameraGroupItemInfo cameraGroupItemInfo3 = new CameraGroupItemInfo
+            {
+                Title = "画面3",
+                PreviewUrl = "",
+                Url = ""
+            };
+            cameraGroupItemInfos.Add(cameraGroupItemInfo3);
+
+            cgi.CameraGroupItemList = cameraGroupItemInfos;
+
+            CameraGroup1 = cgi;
+
             if (ConfigurationManager.AppSettings["RtmpServerUrl"] != null)
             {
                 RtmpServerUrl = ConfigurationManager.AppSettings["RtmpServerUrl"];

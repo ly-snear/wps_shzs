@@ -86,10 +86,6 @@ namespace CalligraphyAssistantMain.Controls
             List<Image> imageList = Common.GetChildObjects<Image>(backGd, typeof(Image));
             for (int i = 0; i < 12; i++)
             {
-                if (i == 9)
-                {
-                    continue;
-                }
                 Image image = imageList.FirstOrDefault(p => p.Tag.ToString() == i.ToString());
                 string imagePath = Common.AppPath + $"Images\\{i}.png";
                 if (File.Exists(imagePath))
@@ -166,7 +162,7 @@ namespace CalligraphyAssistantMain.Controls
                     Navigate("http://yidian.nnyun.net/home?token=" + Common.CurrentUser.Token);
                     break;
                 case "9":
-                    Navigate("http://yidian.nnyun.net/home?token=" + Common.CurrentUser.Token);
+                    Navigate("https://g2-dev.ltfc.net/third_party?token=" + Common.CurrentUser.Token);
                     break;
                 case "10":
                     OpenProcess(Common.AppPath + "Krita\\Krita (x64)\\bin\\krita.exe", "图像绘画");

@@ -77,6 +77,7 @@
                     <Image Tag="8" MouseLeftButtonDown="Image_MouseLeftButtonDown"/>
                 </Grid>
                 <Grid Grid.Column="1" Grid.Row="2" Cursor="Hand" Margin="20">
+                    <Image Tag="9" MouseLeftButtonDown="Image_MouseLeftButtonDown"/>
                 </Grid>
                 <Grid Grid.Column="2" Grid.Row="2" Cursor="Hand" Margin="20">
                     <Image Tag="10" MouseLeftButtonDown="Image_MouseLeftButtonDown"/>
